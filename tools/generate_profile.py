@@ -205,7 +205,7 @@ class MessageInfo(namedtuple('MessageInfo', ('name', 'num', 'group_name', 'field
     def __str__(self):
         s = "MessageType(%s\n" % render_comment(self.comment)
         s += "    name='%s',\n" % self.name
-        s += "    mesg_num=%d,\n" % self.num
+        s += "    mesg_num=%s,\n" % self.num
         s += "    fields={\n"
         for field in sorted(self.fields, key=lambda fi: fi.num):
             # Don't include trailing comma for fields
